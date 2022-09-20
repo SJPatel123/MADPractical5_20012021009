@@ -4,8 +4,13 @@ import android.app.Service
 import android.content.Intent
 import android.media.MediaPlayer
 import android.os.IBinder
+import android.widget.ImageButton
+import androidx.appcompat.content.res.AppCompatResources.getDrawable
+import androidx.core.content.ContextCompat.getDrawable
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class MediaService : Service() {
+    private lateinit var fabpauseicon : FloatingActionButton
     private lateinit var media : MediaPlayer
     companion object{
         public final var DATA_KEY = "service"
